@@ -59,7 +59,7 @@ class EmailFake {
             catch (error) {
                 console.error("EmailFake error: ", error);
             }
-            return result.splice(0, limit);
+            return result.slice(0, limit);
         });
     }
     getMail() {

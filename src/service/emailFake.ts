@@ -54,7 +54,7 @@ export default class EmailFake implements ITempMail {
     } catch (error) {
       console.error("EmailFake error: ", error);
     }
-    return result.splice(0, limit);
+    return result.slice(0, limit);
   }
   async getMail(id: string = "-1"): Promise<IMailResult | null> {
     try {
