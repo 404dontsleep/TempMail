@@ -1,7 +1,6 @@
 {
   "name": "tempmail",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "build": "tsc",
     "test": "tsc && node dist/test.js"
@@ -18,11 +17,7 @@
   "dependencies": {
     "axios": "^1.7.7"
   },
-  "exports": {
-    ".": {
-      "import": "./dist/index.d.ts"
-    }
-  },
+  "main": "dist/index.js",
   "type": "module",
   "types": "./dist/index.d.ts"
 }
