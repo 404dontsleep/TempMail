@@ -17,5 +17,10 @@
   },
   "dependencies": {
     "axios": "^1.7.7"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    }
   }
 }
