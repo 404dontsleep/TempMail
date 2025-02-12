@@ -69,7 +69,7 @@ export default class EmailFake implements ITempMail {
       const _subRegex =
         /To: <\/span><span>(.*?)<\/span>.*From: <\/span><span>(.*?)<.*Subject:.*?inherit;">(.*?)<.*Received:.*<span>(.*?)<span/gm;
       const _regex =
-        /<div class="e7m mess_bodiyy">(.*?)<\/div><div class="e7m border-right"><\/div>/gm;
+        /<div class="e7m mess_bodiyy(?:\s+plain)?">([\s\S]*?)<\/div><div class="e7m border-right"><\/div>/gm;
       const subMatch = _subRegex.exec(data);
       const match = _regex.exec(data);
       if (match && subMatch) {
